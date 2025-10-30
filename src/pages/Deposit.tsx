@@ -143,8 +143,15 @@ const Deposit = () => {
             )}
 
             {method === 'sbp' && (
-              <div className="text-white/70 mb-6">
-                <p>Отсканируйте QR-код в приложении вашего банка</p>
+              <div className="mb-6 space-y-4">
+                <div className="bg-white/10 rounded-xl p-4 border border-white/20">
+                  <div className="text-white/70 text-sm mb-2">Переведите на номер:</div>
+                  <div className="text-2xl font-bold text-white mb-1">89069892267</div>
+                  <div className="text-white/60 text-xs">Через Систему Быстрых Платежей (СБП)</div>
+                </div>
+                <div className="text-white/70 text-sm">
+                  <p>После перевода деньги автоматически зачислятся на ваш баланс</p>
+                </div>
               </div>
             )}
 

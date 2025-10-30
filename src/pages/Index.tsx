@@ -6,8 +6,8 @@ import { useNavigate } from 'react-router-dom';
 
 const Index = () => {
   const navigate = useNavigate();
-  const [mainBalance] = useState(5000);
-  const [bonusBalance] = useState(500);
+  const [mainBalance] = useState(0);
+  const [bonusBalance] = useState(0);
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#1A1F2C] via-[#2D1B4E] to-[#1A1F2C]">
@@ -20,26 +20,22 @@ const Index = () => {
             <span className="text-xl font-bold text-white">RocketQueen</span>
           </div>
           
-          <nav className="hidden md:flex items-center gap-6">
-            <Button variant="ghost" className="text-white hover:text-[#8B5CF6]" onClick={() => navigate('/card')}>
-              <Icon name="CreditCard" size={18} className="mr-2" />
-              Карта
+          <nav className="hidden md:flex items-center gap-4">
+            <Button variant="ghost" className="text-white hover:text-[#8B5CF6]">
+              <Icon name="Headset" size={18} className="mr-2" />
+              Техподдержка
             </Button>
-            <Button variant="ghost" className="text-white hover:text-[#8B5CF6]" onClick={() => navigate('/referral')}>
-              <Icon name="Users" size={18} className="mr-2" />
-              Рефералы
+            <Button variant="ghost" className="text-white hover:text-[#8B5CF6]">
+              <Icon name="Handshake" size={18} className="mr-2" />
+              Сотрудничество
             </Button>
-            <Button variant="ghost" className="text-white hover:text-[#8B5CF6]" onClick={() => navigate('/withdraw')}>
-              <Icon name="Download" size={18} className="mr-2" />
-              Вывод
+            <Button variant="ghost" className="text-white hover:text-[#8B5CF6]" onClick={() => navigate('/promotion')}>
+              <Icon name="TrendingUp" size={18} className="mr-2" />
+              Накрутка
             </Button>
-            <Button variant="ghost" className="text-white hover:text-[#8B5CF6]" onClick={() => navigate('/deposit')}>
-              <Icon name="Upload" size={18} className="mr-2" />
-              Пополнить
-            </Button>
-            <Button variant="ghost" className="text-white hover:text-[#8B5CF6]" onClick={() => navigate('/game')}>
-              <Icon name="Gamepad2" size={18} className="mr-2" />
-              Игра
+            <Button variant="ghost" className="text-white hover:text-[#D946EF]" onClick={() => navigate('/admin')}>
+              <Icon name="Settings" size={18} className="mr-2" />
+              Управление
             </Button>
           </nav>
 
@@ -75,35 +71,36 @@ const Index = () => {
           </Card>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
           <Button 
-            className="h-auto py-6 bg-white/10 hover:bg-white/20 border border-white/20 text-white flex flex-col items-center gap-2"
-            onClick={() => navigate('/game')}
+            className="h-auto py-8 bg-gradient-to-br from-[#8B5CF6] to-[#D946EF] hover:opacity-90 border-0 text-white flex flex-col items-center gap-3 rounded-2xl shadow-xl"
+            onClick={() => navigate('/card')}
           >
-            <Icon name="Rocket" size={32} />
-            <span className="text-lg font-semibold">Играть</span>
+            <Icon name="CreditCard" size={40} />
+            <span className="text-lg font-bold">Карта</span>
           </Button>
 
           <Button 
-            className="h-auto py-6 bg-white/10 hover:bg-white/20 border border-white/20 text-white flex flex-col items-center gap-2"
-            onClick={() => navigate('/deposit')}
+            className="h-auto py-8 bg-gradient-to-br from-[#F97316] to-[#EA384C] hover:opacity-90 border-0 text-white flex flex-col items-center gap-3 rounded-2xl shadow-xl"
           >
-            <Icon name="CreditCard" size={32} />
-            <span className="text-lg font-semibold">Пополнить</span>
+            <Icon name="Wallet" size={40} />
+            <span className="text-lg font-bold">Баланс</span>
           </Button>
 
           <Button 
-            className="h-auto py-6 bg-white/10 hover:bg-white/20 border border-white/20 text-white flex flex-col items-center gap-2"
+            className="h-auto py-8 bg-gradient-to-br from-[#0EA5E9] to-[#8B5CF6] hover:opacity-90 border-0 text-white flex flex-col items-center gap-3 rounded-2xl shadow-xl"
+            onClick={() => navigate('/referral')}
           >
-            <Icon name="History" size={32} />
-            <span className="text-lg font-semibold">История</span>
+            <Icon name="Users" size={40} />
+            <span className="text-lg font-bold">Рефералы</span>
           </Button>
 
           <Button 
-            className="h-auto py-6 bg-white/10 hover:bg-white/20 border border-white/20 text-white flex flex-col items-center gap-2"
+            className="h-auto py-8 bg-gradient-to-br from-[#10B981] to-[#059669] hover:opacity-90 border-0 text-white flex flex-col items-center gap-3 rounded-2xl shadow-xl"
+            onClick={() => navigate('/withdraw')}
           >
-            <Icon name="Heart" size={32} />
-            <span className="text-lg font-semibold">Донат</span>
+            <Icon name="Download" size={40} />
+            <span className="text-lg font-bold">Вывод</span>
           </Button>
         </div>
 

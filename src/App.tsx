@@ -11,6 +11,8 @@ import Referral from "./pages/Referral";
 import Card from "./pages/Card";
 import Withdraw from "./pages/Withdraw";
 import Deposit from "./pages/Deposit";
+import Promotion from "./pages/Promotion";
+import Admin from "./pages/Admin";
 
 const queryClient = new QueryClient();
 
@@ -27,6 +29,8 @@ const App = () => (
           <Route path="/card" element={<Card />} />
           <Route path="/withdraw" element={<Withdraw />} />
           <Route path="/deposit" element={<Deposit />} />
+          <Route path="/promotion" element={<Promotion />} />
+          <Route path="/admin" element={<Admin />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
